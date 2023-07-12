@@ -1,9 +1,34 @@
 #Start with your mitos annotation.
 cp file.fas fiename.fasta
 #search and replace for special characters
-sed -e "s/ /_/g" *fasta | sed -e "s/[;]//g" >izs104.2.fasta
+sed -e "s/NODE_2_length_18790_cov_17556779; /IZS104_/g" izs104.fasta | sed -e "s/; +; /_/g" | sed -e "s/; -; /_/g" >izs104.rn.fasta
 #Then split the fasta into several files with indiviudal genes
-splitfasta izs104.2.fasta
-grep "NODE" *fasta
-conda install -c bioconda rename
+splitfasta izs104.rn.fasta
+cd izs104.rn_split_files
+grep "NODE" .fasta
+#copy the output into a text editor on your local machine, and search replace :> with SPACE>  
+#save as renaming.txt and then open that in excel (we are learning some excel tricks too!)
+cp izs104.rn_1.fasta ./IZS104_cob.fasta
+cp izs104.rn_10.fasta ./IZS104_trnM.fasta
+cp izs104.rn_11.fasta ./IZS104_cox3.fasta
+cp izs104.rn_12.fasta ./IZS104_atp6.fasta
+cp izs104.rn_13.fasta ./IZS104_atp8.fasta
+cp izs104.rn_14.fasta ./IZS104_cox2.fasta
+cp izs104.rn_15.fasta ./IZS104_cox1.fasta
+cp izs104.rn_16.fasta ./IZS104_nad1_0.fasta
+cp izs104.rn_17.fasta ./IZS104_nad1_1.fasta
+cp izs104.rn_2.fasta ./IZS104_nad6.fasta
+cp izs104.rn_3.fasta ./IZS104_nad3.fasta
+cp izs104.rn_4.fasta ./IZS104_nad4l.fasta
+cp izs104.rn_5.fasta ./IZS104_msh1.fasta
+cp izs104.rn_6.fasta ./IZS104_rrnL.fasta
+cp izs104.rn_7.fasta ./IZS104_nad2.fasta
+cp izs104.rn_8.fasta ./IZS104_nad5.fasta
+cp izs104.rn_9.fasta ./IZS104_nad4.fasta
+rm *rn*fasta
+
+#make a new directory in the results directory
+mkdir aligns
+cd aligns
+
 
