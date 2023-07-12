@@ -13,34 +13,33 @@ For advanced users:
 ##To make sure conda is working, you will see (base)  at the prompt##
 #2. Install Git
 	conda install git
-#3. Install Novoplasty:
-	git clone https://github.com/ndierckx/NOVOPlasty.git
-#4. Install Trimmomatic
+#3. Install Trimmomatic
 	conda create --name trimmomatic
 	conda activate trimmomatic
 	conda install -c bioconda trimmomatic
 	conda deactivate
-#5. Install Fastqc
+#4. Install Fastqc
 	conda create --name fastqc	
 	conda activate fastqc
 	conda install -c bioconda fastqc
 	conda deactivate
-#6. Install Spades
+#5. Install Spades
 	conda create --name spades
 	conda activate spades
 	conda install -c bioconda spades
-#7. Install Mafft
+#6. Install Mafft
 	conda create --name mafft
 	conda activate mafft
 	conda install -c bioconda mafft
 	conda deactivate
-#8 Install Blast
+#7 Install Blast
 	conda create --name blast
 	conda activate blast
 	conda install -c bioconda blast
 	conda deactivate
-#9 Install Mitofinder using the Mac or Windows directions below	
-	
+#8 Install Mitofinder using the Mac or Windows directions below	
+#9 Install NovoPlasty using Mac or Windows directions below
+
 ##If conda does not worK for you, here are alternative ways##
 
 #MAC instructions:
