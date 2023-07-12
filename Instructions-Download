@@ -61,6 +61,7 @@ For advanced users:
 	https://mafft.cbrc.jp/alignment/software/macstandard.html
 #8 Install mitofinder and its dependencies
 	https://github.com/RemiAllio/MitoFinder#get-and-install-mitofinder-linux
+	sh install.sh
 Windows:
 #1. Install Git https://git-scm.com/downloads
 #2. Install Novoplasty:
