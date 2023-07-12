@@ -42,7 +42,7 @@ nohup /Applications/SPAdes-3.15.5-Darwin/bin/spades.py --threads 8 --pe1-1 ../..
 Also, change # threads to the number of threads you have on your local machine
 #Permission errors might still ensue on a Mac, we can go over them in person
 
-#When the run completes, 
+#When the run completes (just a few hours)
 cd IZ_S104
 cp contigs.fasta IZ_S104.contigs.fasta
 
