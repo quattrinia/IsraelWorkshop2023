@@ -17,6 +17,18 @@ q
 grep "NODE_2_length_18790_cov_17.556779" -A 100 ../spades/IZ_S104/IZ_S104.contigs.fasta
 #Copy the contig and put into a new file. How would you do this?
 
+
+######NOVOPlasty assembly####
+cd results
+mkdir novoplasty
+cd novoplasty
+#you need to manually alter your config.txt file
+#cd into the directory where you installed NOVOplasty
+cp config.txt pathto/results/novoplasty
+nano config.txt
+#edit config file
+perl /Users/quattrinia/Applications/NOVOPlasty/NOVOPlasty4.3.1.pl -c config.txt
+
 ######Mitofinder assembly#######
 #You need fully formatted genbank files. Go to REfSeq and then download a ~20 full mitogenomes. 
 #Choice of this db really depends on what mitogenomes you are assembling. 
@@ -25,5 +37,7 @@ https://www.ncbi.nlm.nih.gov/refseq/
 cd results
 mkdir mitofinder
 cd mitofinder
-#We are going to assemble the mitogenome based on trimmed reads. Alternatively, if
-mitofinder -j IZ_S104 -1 ../ 
+#We are going to assemble the mitogenome based on trimmed reads. Alternatively, you can always pass a spades contig.fasta
+file to mitofinder. Check instructions. Mitofinder installation is very tricky-if you were successful, do this in practice, if
+not, just follow along with me. We will discuss the benefits of using htis approach.
+/Users/quattrinia/Applications/MitoFinder/mitofinder -j IZ_S104 -1 ../../trimmed_sequences/IZ_S104_L002_R1_PE_trimmed.fastq.gz  -2 ../../trimmed_sequences/IZ_S104_L002_R2_PE_trimmed.fastq.gz -o 4 -r ../../refs/octo_ref.db
