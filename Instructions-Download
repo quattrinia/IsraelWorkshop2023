@@ -59,10 +59,10 @@ For advanced users:
     cd SPAdes-3.15.5-Darwin/bin/
 #7 Install mafft
 	https://mafft.cbrc.jp/alignment/software/macstandard.html
-#8 Install mitofinder and its dependencies
+#8 Install mitofinder and its dependencies -this can be very difficult to install. If you have problems, dont stress. We can figure it out. Or, I can demonstrate the use
 	https://github.com/RemiAllio/MitoFinder#get-and-install-mitofinder-linux
 	sh install.sh
-Windows:
+Windows 
 #1. Install Git https://git-scm.com/downloads
 #2. Install Novoplasty:
 	git clone https://github.com/ndierckx/NOVOPlasty.git
