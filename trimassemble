@@ -13,7 +13,7 @@ fastqc./*
 mkdir trimmed_sequences
 #navigate to that directory
 conda activate trimmomatic
-trimmomatic PE ../raw/IZ_S104_L002_R1_001.fastq.gz ../raw/IZ_S104_L002_R2_001.fastq.gz ./IZ_S104_L002_R1_PE.fastq.gz ./IZ_S104_L002_R1_SE.fastq.gz ./IZ_S104_L002_R2_PE.fastq.gz ./IZ_S104_L002_R2_SE.fastq.gz ILLUMINACLIP:/Users/quattrinia/Downloads/bioinfo101/refs/itru_adapters_trimmomatic.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:30
+trimmomatic PE ../raw/IZ_S104_L002_R1_001.fastq.gz ../raw/IZ_S104_L002_R2_001.fastq.gz ./IZ_S104_L002_R1_PE_trimmed.fastq.gz ./IZ_S104_L002_R1_SE_trimmed.fastq.gz ./IZ_S104_L002_R2_PE_trimmed.fastq.gz ./IZ_S104_L002_R2_SE_trimmed.fastq.gz ILLUMINACLIP:/Users/quattrinia/Downloads/bioinfo101/refs/itru_adapters_trimmomatic.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:30
 #Takes ~5-10 min
 
 conda activate fastqc
