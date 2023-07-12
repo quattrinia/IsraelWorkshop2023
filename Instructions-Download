@@ -21,7 +21,7 @@ https://github.com/rambaut/figtree/releases
 	conda activate fastqc
 	conda install -c bioconda fastqc
 	conda deactivate
-#6. 	Install Spades
+#6. Install Spades
 	conda create --name spades
 	conda activate spades
 	conda install -c bioconda spades
