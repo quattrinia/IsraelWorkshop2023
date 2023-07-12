@@ -10,6 +10,7 @@ Search for Octocorallia and mitochondrion
 https://www.ncbi.nlm.nih.gov/refseq/
 
 
-We are also going to blast for mt genome sequences in our spades assembly. 
-
-conda install -c bioconda blast
+#We are also going to blast for mt genome sequences in our spades assembly. 
+#First you need to create a blast database of octocoral mt genome sequences
+makeblastdb -in ../../refs/coi_seed.fasta -out ../../refs/coi_seed -dbtype nucl
+blastn -db coi_seed -query IZ_S104.contigs.fasta -outfmt 6 
