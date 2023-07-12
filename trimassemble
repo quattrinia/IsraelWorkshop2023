@@ -1,0 +1,22 @@
+#Make a project directory
+mkdir -p bioinf101/raw
+
+#Download data from the file access site and put into this bioinf101/raw directory
+
+#First, check the quality of your data
+conda activate fastqc
+#havigate to the directory where your raw data are stored
+fastqc./*
+#open the *html file
+
+#Trim your data with trimmomatic
+mkdir trimmed_sequences
+#navigate to that directory
+conda activate trimmomatic
+trimmomatic PE ../raw/IZ_S104_L002_R1_001.fastq.gz ../raw/IZ_S104_L002_R2_001.fastq.gz ./IZ_S104_L002_R1_PE.fastq.gz ./IZ_S104_L002_R1_SE.fastq.gz ./IZ_S104_L002_R2_PE.fastq.gz ./IZ_S104_L002_R2_SE.fastq.gz ILLUMINACLIP:/Users/quattrinia/Downloads/bioinfo101/refs/itru_adapters_trimmomatic.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:30
+#Takes ~5-10 min
+
+conda activate fastqc
+#havigate to the directory where your trimmed data are stored
+fastqc./*
+#open the *html file
