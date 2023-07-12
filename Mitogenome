@@ -30,6 +30,9 @@ nano config.txt
 perl /Users/quattrinia/Applications/NOVOPlasty/NOVOPlasty4.3.1.pl -c config.txt
 
 ###Annotate Spades assembly and Novoplasty assembly with Mitos2###
+#go to http://mitos2.bioinf.uni-leipzig.de/index.py
+#upload data, choose correct translation table (4 for mold and coelenterates) and RefSeq 89 Metazoa
+#Wait for the results!
 
 ######Mitofinder assembly#######
 #You need fully formatted genbank files. Go to REfSeq and then download a ~20 full mitogenomes. 
