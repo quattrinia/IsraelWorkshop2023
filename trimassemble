@@ -29,9 +29,16 @@ spades.py --threads 8 --pe1-1 ../../trimmed_sequences/IZ_S104_L002_R1_PE_trimmed
 #you might get an error related to a collections.hashable comment, if so, you need to update a script. more info can be found here, and I am happy to help with this:
 https://github.com/ablab/spades/issues/873
 #if you can fix this, then rerun spades.
+
 #if you get another error related to OS return value: 22, then we need to run spades by itself, not in conda.
+
 deactivate conda
 
+#Run from the installed version (not conda)
+
+nohup /Applications/SPAdes-3.15.5-Darwin/bin/spades.py --threads 8 --pe1-1 ../../trimmed_sequences/IZ_S104_L002_R1_PE_trimmed.fastq.gz --pe1-2 ../../trimmed_sequences/IZ_S104_L002_R2_PE_trimmed.fastq.gz -o IZ_S104
+#MAc Users. MAc doesnt like spades.hammer.py. You will need to give permissions. Enable permissions in >System Preferences >Security $ Privacy
+#I add nohup which means nohang ups, you can then run spades int he background of your computer. Also, change # threads to the number of threads you have on your local machine
 
 
 
