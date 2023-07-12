@@ -29,6 +29,8 @@ nano config.txt
 #edit config file
 perl /Users/quattrinia/Applications/NOVOPlasty/NOVOPlasty4.3.1.pl -c config.txt
 
+###Annotate Spades assembly and Novoplasty assembly with Mitos2###
+
 ######Mitofinder assembly#######
 #You need fully formatted genbank files. Go to REfSeq and then download a ~20 full mitogenomes. 
 #Choice of this db really depends on what mitogenomes you are assembling. 
