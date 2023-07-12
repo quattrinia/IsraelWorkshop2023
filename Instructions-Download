@@ -30,6 +30,12 @@ https://github.com/rambaut/figtree/releases
 	conda activate mitofinder
 	conda install -c bioconda mitofinder
 	conda deactivate
+#8. Install Mafft
+	conda create --name mafft
+	conda activate mafft
+	conda install -c bioconda mafft
+	conda deactivate
+
 	
 ##To make sure conda is working, you will see (base)  at the prompt##
 	
