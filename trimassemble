@@ -38,7 +38,13 @@ deactivate conda
 
 nohup /Applications/SPAdes-3.15.5-Darwin/bin/spades.py --threads 8 --pe1-1 ../../trimmed_sequences/IZ_S104_L002_R1_PE_trimmed.fastq.gz --pe1-2 ../../trimmed_sequences/IZ_S104_L002_R2_PE_trimmed.fastq.gz -o IZ_S104
 #MAc Users. MAc doesnt like spades.hammer.py. You will need to give permissions. Enable permissions in >System Preferences >Security $ Privacy
-#I add nohup which means nohang ups, you can then run spades int he background of your computer. Also, change # threads to the number of threads you have on your local machine
+#I add nohup which means "nohang ups", so you can then run spades in the background of your computer (you can close terminal, close your computer, and it will still run.
+Also, change # threads to the number of threads you have on your local machine
+#Permission errors might still ensue on a Mac, we can go over them in person
+
+#When the run completes, 
+cd IZ_S104
+cp contigs.fasta IZ_S104.contigs.fasta
 
 
 
