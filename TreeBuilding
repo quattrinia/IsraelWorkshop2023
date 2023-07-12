@@ -1,2 +1,9 @@
-#Take your mitos annotation.
-splitfasta izs104.fasta
+#Start with your mitos annotation.
+cp file.fas fiename.fasta
+#search and replace for special characters
+sed -e "s/ /_/g" *fasta | sed -e "s/[;]//g" >izs104.2.fasta
+#Then split the fasta into several files with indiviudal genes
+splitfasta izs104.2.fasta
+grep "NODE" *fasta
+conda install -c bioconda rename
+
