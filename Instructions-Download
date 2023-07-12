@@ -35,7 +35,11 @@ https://github.com/rambaut/figtree/releases
 	conda activate mafft
 	conda install -c bioconda mafft
 	conda deactivate
-
+#9 Install Blast
+	conda create --name blast
+	conda activate blast
+	conda install -c bioconda blast
+	conda deactivate
 	
 ##To make sure conda is working, you will see (base)  at the prompt##
 	
