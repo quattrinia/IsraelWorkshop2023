@@ -39,7 +39,8 @@ For advanced users:
 	conda deactivate
 #8 Install Mitofinder using the Mac or Windows directions below	
 #9 Install NovoPlasty using Mac or Windows directions below
-
+#10 Install splitfasta 
+	pip install split-fasta 
 ##If conda does not worK for you, here are alternative ways##
 
 #MAC instructions:
