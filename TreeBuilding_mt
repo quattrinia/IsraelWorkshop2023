@@ -51,4 +51,7 @@ mafft muts.fasta >muts.align.fasta
 #concatenate these two genes together-many ways to do this, writing your own script for example, but I like to use phyluce
 #try doing this on your own using phyluce_align_concatenate_alignments
 
+#build a tree using these two concatenated genes
+iqtree2 -s ../mafft-align-raxml/mafft-align-raxml.phylip -m GTR+G -bb 1000 -pre mttree
+
 
