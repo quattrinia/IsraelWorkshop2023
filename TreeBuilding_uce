@@ -1,1 +1,4 @@
+##We are going to build a tree using IqTree##
 
+#We will use the phyluce data generated.
+conda activate iqtree
