@@ -40,7 +40,8 @@ For advanced users:
 	conda activate blast
 	conda install -c bioconda blast
 	conda deactivate
-#8 Install Mitofinder using the Mac or Windows directions below	
+#8 Install Phyluce
+	https://github.com/faircloth-lab/phyluce/releases
 #9 Install NovoPlasty using Mac or Windows directions below
 #10 Install splitfasta 
 	pip install split-fasta 
@@ -83,10 +84,9 @@ Windows
     	cd SPAdes-3.15.5-Linux/bin/	
 #7 Install Mafft
 	See instructions here: https://mafft.cbrc.jp/alignment/software/ubuntu_on_windows.html
-#8 Install mitofinder and its dependencies
-	https://github.com/RemiAllio/MitoFinder#get-and-install-mitofinder-linux
 
-Windows:
+#The program Mitofinder is fantastic for assembling mitogenomes, but it can be difficult to install. I recommend trying if you can!
+	https://github.com/RemiAllio/MitoFinder
     
   Create a github page
   https://docs.github.com/en/pages/quickstart  
