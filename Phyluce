@@ -2,8 +2,11 @@
 cd results
 mkdir -p phyluce/spades-assemblies/contigs
 conda activate phyluce-1.7.2-x86 
+cd phyluce/spades-assemblies/contigs/
+#Create a symlink to your IZ_S104.contigs.fasta file, replace with your full path to IZ_S104.contigs.fasta 
+ln -s /Users/quattrinia/Downloads/bioinfo101/results/spades/IZ_S104/IZ_S104.contigs.fasta  ./
 
-#Faircloths Phyluce Tutorial is fairly simple to follow https://phyluce.readthedocs.io/en/latest/tutorials/tutorial-1.html#finding-uce-loci
+#Faircloth's Phyluce Tutorial is fairly simple to follow https://phyluce.readthedocs.io/en/latest/tutorials/tutorial-1.html#finding-uce-loci
 
 #We are going to start at "Finding UCE Loci"
 
@@ -11,6 +14,64 @@ phyluce_assembly_match_contigs_to_probes \
     --contigs spades-assemblies/contigs \
     --probes ../../refs/octo-v2-final-probes.fasta \
     --output uce-search-results
+#This takes ~10 min
 
+mkdir -t taxon-sets/all
+#create a configuration file that has all of your species in it that you are interested in 
+#taxon-set.conf file example is in the /refs folder so either create your own file or copy this to your phyluce dir
+cd taxon-sets/all
+mkdir log
+
+phyluce_assembly_get_fastas_from_match_counts \
+    --contigs ../../spades-assemblies/contigs \
+    --locus-db ../../uce-search-results/probe.matches.sqlite \
+    --match-count-output all-taxa-incomplete.conf \
+    --output all-taxa-incomplete.fasta \
+    --incomplete-matrix all-taxa-incomplete.incomplete \
+    --log-path log
+
+phyluce_assembly_explode_get_fastas_file \
+    --input all-taxa-incomplete.fasta \
+    --output exploded-fastas \
+    --by-taxon
+
+for i in exploded-fastas/*.fasta;
+do
+    phyluce_assembly_get_fasta_lengths --input $i --csv;
+done
+
+#There are two ways to align and then trim data-aligning and then trimming internally by using gblocks or 
+trimming from the edges. This really depends on your dataset. We are going to do a simple edge trimming
+but you can find more information about this on the phyluce webpage.
+
+phyluce_align_seqcap_align \
+    --input all-taxa-incomplete.fasta \
+    --output mafft-nexus-edge-trimmed \
+    --taxa 5 \
+    --aligner mafft \
+    --cores 8 \
+    --incomplete-matrix \
+    --log-path log
+#aligning takes ~15 min or so
+
+phyluce_align_remove_locus_name_from_files \
+    --alignments mafft-nexus-internal-trimmed-gblocks \
+    --output mafft-nexus-internal-trimmed-gblocks-clean \
+    --cores 4 \
+    --log-path log
+
+phyluce_align_get_only_loci_with_min_taxa \
+--alignments mafft-nexus-edge-trimmed-clean \
+--taxa 5 \     
+--percent 0.90 \
+--output mafft-nexus-internal-trimmed-gblocks-clean-90p \
+--cores 4 \     
+--log-path log 
+
+phyluce_align_concatenate_alignments \
+    --alignments mafft-nexus-internal-trimmed-gblocks-clean-99p \
+    --output mafft-nexus-internal-trimmed-gblocks-clean-99p-raxml \
+    --phylip \
+    --log-path log
 
 
