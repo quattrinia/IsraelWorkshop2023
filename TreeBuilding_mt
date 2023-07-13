@@ -31,8 +31,24 @@ rm *rn_*fasta
 
 #make a new directory in the results directory
 mkdir -p mitos/aligns
-cd aligns
 
 #We are now going to concatenate the new genes taken from the mitogenome with a prior alignment published
 in Quattrinni et al. 2023. #
 #we are going to focus on just two genes for this example:cox1 and mutS
+cp ../../refs/octo_fasta_bygene/muts_dec21.fasta ./aligns/
+cp ../../refs/octo_fasta_bygene/cox1_dec21.fasta ./aligns
+cp izs104.rn_split_files/IZS104_msh1.fasta  ./aligns/
+cp izs104.rn_split_files/IZS104_cox1.fasta ./aligns/
+
+cd aligns
+cat IZS104_cox1.fasta cox1_dec21.fasta >cox1.fasta
+cat muts_dec21.fasta IZS104_msh1.fasta >muts.fasta
+#Open each fasta in aliview and make sure all is ok.
+
+#Now we are going to align these files each with mafft, and then concatenate them
+mafft cox1.fasta >cox1.align.fasta
+mafft muts.fasta >muts.align.fasta
+#concatenate these two genes together-many ways to do this, writing your own script for example, but I like to use phyluce
+#try doing this on your own using phyluce_align_concatenate_alignments
+
+
