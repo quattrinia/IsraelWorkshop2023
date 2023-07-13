@@ -1,9 +1,9 @@
-####We are going to use a Spades-based Blast to find mitgenonme and either Novoplasty or Mitofinder to assemble mt genomes###
+####We are going to use a Spades-based Blast to find mitogenonme and either Novoplasty or Mitofinder to assemble mt genomes###
 
 First you need to download reference data from genbank. For Novoplasty, you need a seed file and I suggest COI.
 
 https://www.ncbi.nlm.nih.gov
-Serach COI and Swiftia-download to a fasta formatted file.
+Search COI and Swiftia-download to a fasta formatted file.
 
 #We are first going to blast for mt genome sequences in our spades assembly. 
 #First you need to create a blast database of octocoral mt genome sequences
