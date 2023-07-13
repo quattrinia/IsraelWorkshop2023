@@ -33,7 +33,7 @@ rm *rn_*fasta
 mkdir -p mitos/aligns
 
 #We are now going to concatenate the new genes taken from the mitogenome with a prior alignment published
-in Quattrinni et al. 2023. #
+in Quattrini et al. 2023. #
 #we are going to focus on just two genes for this example:cox1 and mutS
 cp ../../refs/octo_fasta_bygene/muts_dec21.fasta ./aligns/
 cp ../../refs/octo_fasta_bygene/cox1_dec21.fasta ./aligns
