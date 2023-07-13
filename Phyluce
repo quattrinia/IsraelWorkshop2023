@@ -1,1 +1,16 @@
+###Code for a simple phyluce analysis to pull out UCEs####
+cd results
+mkdir -p phyluce/spades-assemblies/contigs
+conda activate phyluce-1.7.2-x86 
+
+#Faircloths Phyluce Tutorial is fairly simple to follow https://phyluce.readthedocs.io/en/latest/tutorials/tutorial-1.html#finding-uce-loci
+
+#We are going to start at "Finding UCE Loci"
+
+phyluce_assembly_match_contigs_to_probes \
+    --contigs spades-assemblies/contigs \
+    --probes ../../refs/octo-v2-final-probes.fasta \
+    --output uce-search-results
+
+
 
