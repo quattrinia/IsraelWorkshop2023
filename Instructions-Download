@@ -47,6 +47,10 @@ For advanced users:
 #9 Install NovoPlasty using Mac or Windows directions below
 #10 Install splitfasta 
 	pip install split-fasta 
+#11 Install IqTree
+	conda create -name iqtree
+	conda activate iqttree
+	conda install -c bioconda iqtree
 ##If conda does not worK for you, here are alternative ways##
 
 #MAC instructions:
@@ -66,9 +70,8 @@ For advanced users:
     cd SPAdes-3.15.5-Darwin/bin/
 #7 Install mafft
 	https://mafft.cbrc.jp/alignment/software/macstandard.html
-#8 Install mitofinder and its dependencies -this can be very difficult to install. If you have problems, dont stress. We can figure it out. Or, I can demonstrate the use
-	https://github.com/RemiAllio/MitoFinder#get-and-install-mitofinder-linux
-	sh install.sh
+#8 Install IQTree
+	http://www.iqtree.org/doc/
 Windows 
 #1. Install Git https://git-scm.com/downloads
 #2. Install Novoplasty:
@@ -86,8 +89,11 @@ Windows
     	cd SPAdes-3.15.5-Linux/bin/	
 #7 Install Mafft
 	See instructions here: https://mafft.cbrc.jp/alignment/software/ubuntu_on_windows.html
+#8 Install IQTree
+	http://www.iqtree.org/doc/
 
-#The program Mitofinder is fantastic for assembling mitogenomes, but it can be difficult to install. I recommend trying if you can!
+#The program Mitofinder is fantastic for assembling mitogenomes, but it can be difficult to install. I recommend trying it
+in the future if you can!-we wont be going over this in the workshop
 	https://github.com/RemiAllio/MitoFinder
     
 #I urge you all to create a github page
