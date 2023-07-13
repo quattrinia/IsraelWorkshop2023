@@ -2,3 +2,10 @@
 
 #We will use the phyluce data generated.
 conda activate iqtree
+cd taxon-sets/all
+mkdir iqtree
+cd iqtree
+#We will make a simple tree using the phylip alignment produced by phyluce
+#Iqtree has a ton of great options, but for simplicity, we will specify the model (instead of using a modelfinder)
+and 1000 ultrafast bs replicates. IQtree has a fantastic tutorial http://www.iqtree.org/doc/Tutorial#first-running-example ###
+nohup iqtree2 -s mafft-nexus-internal-trimmed-gblocks-clean-99p-raxml/mafft-nexus-internal-trimmed-gblocks-clean-99p-raxml.phylip -bb 1000 -m GTR+G -pre test
