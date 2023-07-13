@@ -30,7 +30,7 @@ cp izs104.rn_9.fasta ./IZS104_nad4.fasta
 rm *rn_*fasta
 
 #make a new directory in the results directory
-mkdir aligns
+mkdir -p mitos/aligns
 cd aligns
 
 #We are now going to concatenate the new genes taken from the mitogenome with a prior alignment published
