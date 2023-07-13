@@ -25,10 +25,12 @@ cp izs104.rn_6.fasta ./IZS104_rrnL.fasta
 cp izs104.rn_7.fasta ./IZS104_nad2.fasta
 cp izs104.rn_8.fasta ./IZS104_nad5.fasta
 cp izs104.rn_9.fasta ./IZS104_nad4.fasta
-rm *rn*fasta
+rm *rn_*fasta
 
 #make a new directory in the results directory
 mkdir aligns
 cd aligns
 
-
+#We are now going to concatenate the new genes taken from the mitogenome with a prior alignment published
+in Quattrinni et al. 2023. #
+#we are going to focus on a few of these genes:cox1, nad2, mutS, and 
