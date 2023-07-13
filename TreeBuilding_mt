@@ -2,11 +2,13 @@
 cp file.fas fiename.fasta
 #search and replace for special characters
 sed -e "s/NODE_2_length_18790_cov_17556779; /IZS104_/g" izs104.fasta | sed -e "s/; +; /_/g" | sed -e "s/; -; /_/g" >izs104.rn.fasta
+
 #Then split the fasta into several files with indiviudal genes
 splitfasta izs104.rn.fasta
 cd izs104.rn_split_files
 grep "NODE" .fasta
-#copy the output into a text editor on your local machine, and search replace :> with SPACE>  
+
+#copy the output into a text editor, and search replace ":>" with "SPACE>"  
 #save as renaming.txt and then open that in excel (we are learning some excel tricks too!)
 cp izs104.rn_1.fasta ./IZS104_cob.fasta
 cp izs104.rn_10.fasta ./IZS104_trnM.fasta
@@ -33,4 +35,4 @@ cd aligns
 
 #We are now going to concatenate the new genes taken from the mitogenome with a prior alignment published
 in Quattrinni et al. 2023. #
-#we are going to focus on a few of these genes:cox1, nad2, mutS, and 
+#we are going to focus on just two genes for this example:cox1 and mutS
