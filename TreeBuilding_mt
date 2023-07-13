@@ -3,7 +3,7 @@ cp file.fas fiename.fasta
 #search and replace for special characters
 sed -e "s/NODE_2_length_18790_cov_17556779; /IZS104_/g" izs104.fasta | sed -e "s/; +; /_/g" | sed -e "s/; -; /_/g" >izs104.rn.fasta
 
-#Then split the fasta into several files with indiviudal genes
+#Then split the fasta into several files with individual genes
 splitfasta izs104.rn.fasta
 cd izs104.rn_split_files
 grep "NODE" .fasta
