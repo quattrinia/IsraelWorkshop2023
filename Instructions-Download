@@ -42,6 +42,8 @@ For advanced users:
 	conda deactivate
 #8 Install Phyluce
 	https://github.com/faircloth-lab/phyluce/releases
+	#Follow directions, to activate
+	conda activate phyluce-1.7.2-x86 
 #9 Install NovoPlasty using Mac or Windows directions below
 #10 Install splitfasta 
 	pip install split-fasta 
