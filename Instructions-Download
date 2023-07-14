@@ -51,7 +51,9 @@ For advanced users:
 	conda create -name iqtree
 	conda activate iqttree
 	conda install -c bioconda iqtree
-##If conda does not worK for you, here are alternative ways-check dependencies! And make sure you have python installed###
+
+##If conda does not worK for you, there are alternative ways below-check dependencies!
+And make sure you have python installed https://www.python.org###
 
 #MAC instructions:
 #1. Install HomeBrew  https://brew.sh
