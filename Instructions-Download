@@ -10,6 +10,15 @@ https://www.barebones.com/products/bbedit/
 https://notepad-plus-plus.org
 
 For advanced users:
+#Windows users who will proceed with conda. Make sure to have installed ubuntu for windows. Follow those directions here
+before proceeding.  To do this:
+#1.    Go to the search box on tool bar and type: turn windows features on or off
+#2.    The option should show on the menu. Select it
+#3.    Scroll down until you find Windows Subsystem for Linux
+#4.    Check the box and click ok
+ #Then follow the directions here:
+https://learn.microsoft.com/en-us/windows/wsl/install
+ 
 #Conda instructions
 #1. Install Anaconda
 	 https://www.anaconda.com/download
