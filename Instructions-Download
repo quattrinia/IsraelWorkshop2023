@@ -35,9 +35,7 @@ https://learn.microsoft.com/en-us/windows/wsl/install
 	conda activate trimmomatic
 	conda install -c bioconda trimmomatic
 	conda deactivate
-
 	OR
-
 	Using Ubuntu:
 	sudo apt-get update
 	sudo apt-get install trimmomatic
@@ -60,9 +58,7 @@ https://learn.microsoft.com/en-us/windows/wsl/install
 	conda activate blast
 	conda install -c bioconda blast
 	conda deactivate
-
 	OR
-
 	Using Ubuntu:
 	sudo apt install ncbi-blast+
 
@@ -73,6 +69,8 @@ https://learn.microsoft.com/en-us/windows/wsl/install
 #9 Install NovoPlasty using Mac or Windows directions below
 #10 Install splitfasta 
 	pip install split-fasta 
+	OR
+	download from https://pypi.org/project/split-fasta/#files
 #11 Install IqTree
 	conda create -name iqtree
 	conda activate iqttree
