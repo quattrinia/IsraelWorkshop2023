@@ -60,6 +60,12 @@ https://learn.microsoft.com/en-us/windows/wsl/install
 	conda activate blast
 	conda install -c bioconda blast
 	conda deactivate
+
+	OR
+
+	Using Ubuntu:
+	sudo apt install ncbi-blast+
+
 #8 Install Phyluce
 	https://github.com/faircloth-lab/phyluce/releases
 	#Follow directions, to activate
