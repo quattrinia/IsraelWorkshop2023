@@ -19,7 +19,7 @@ before proceeding.  To do this:
  #Then follow the directions here:
 https://learn.microsoft.com/en-us/windows/wsl/install
 
-(Additional instructions for Ubuntu:
+(Additional instructions for Windows users for Ubuntu:
 #1. Go to the search box on tool bar and type: turn windows features on or off
 #2. The option should show on the menu. Select it
 #3. Check .NET framework options as well as Virtual Machine Platform)
