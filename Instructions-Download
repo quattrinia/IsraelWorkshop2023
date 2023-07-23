@@ -112,9 +112,6 @@ Windows
 #2. Install Novoplasty:
 	git clone https://github.com/ndierckx/NOVOPlasty.git
 #4. Install Trimmomatic
-#5. Install Fastqc
-	http://www.usadellab.org/cms/?page=trimmomatic
-#4. Install Trimmomatic
 	http://www.usadellab.org/cms/?page=trimmomatic
 #5. Install Fastqc
 	https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
