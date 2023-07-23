@@ -35,6 +35,10 @@ https://learn.microsoft.com/en-us/windows/wsl/install
 	conda activate trimmomatic
 	conda install -c bioconda trimmomatic
 	conda deactivate
+
+	Using Ubuntu:
+	sudo apt-get update
+	sudo apt-get install trimmomatic
 #4. Install Fastqc
 	conda create --name fastqc	
 	conda activate fastqc
