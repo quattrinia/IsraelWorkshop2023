@@ -48,6 +48,11 @@ https://learn.microsoft.com/en-us/windows/wsl/install
 	conda create --name spades
 	conda activate spades
 	conda install -c bioconda spades
+	OR
+	http://cab.spbu.ru/files/release3.15.5/SPAdes-3.15.5-Darwin.tar.gz 
+	Open Git:
+	tar -zxf SPAdes-3.15.5-Darwin.tar.gz
+    	cd SPAdes-3.15.5-Darwin/bin/
 #6. Install Mafft
 	conda create --name mafft
 	conda activate mafft
@@ -71,6 +76,9 @@ https://learn.microsoft.com/en-us/windows/wsl/install
 	pip install split-fasta 
 	OR
 	download from https://pypi.org/project/split-fasta/#files
+	Open Git:
+	tar -zxf split-fasta-1.0.0.tar
+    	cd split-fasta-1.0.0.tar
 #11 Install IqTree
 	conda create -name iqtree
 	conda activate iqttree
