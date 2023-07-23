@@ -36,6 +36,10 @@ https://learn.microsoft.com/en-us/windows/wsl/install
 	conda install -c bioconda trimmomatic
 	conda deactivate
 
+	OR
+	conda install trimmomatic
+
+
 	Using Ubuntu:
 	sudo apt-get update
 	sudo apt-get install trimmomatic
