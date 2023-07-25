@@ -32,6 +32,7 @@ https://learn.microsoft.com/en-us/windows/wsl/install
 	rm -rf ~/miniconda3/miniconda.sh
 	~/miniconda3/bin/conda init bash
 	~/miniconda3/bin/conda init zsh
+ #Close the terminal and open it again
 
 ##To make sure conda is working, you will see (base)  at the prompt##
 #2. Install Git
